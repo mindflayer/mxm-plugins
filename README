@@ -1,0 +1,18 @@
+== MusixmatchApiParser.py ==
+
+Rhythmbox lyrics plugin, to install it you need to:
+
+- edit LyricsSites.py in the Rhythmbox lyrics plugin directory adding
+  from MusixmatchApiParser import MusixmatchApiParser
+
+  and in lyrics_sites list the dictionary
+  { 'id': 'musixmatch.com',	'class': MusixmatchApiParser,	'name': _("musiXmatch (musixmatch.com)")	}
+
+- copy the script file in the same directory and run the program.
+
+
+== musixmatch.lua ==
+
+VLC lyrics plugin, to install it you need to:
+
+- copy the script in the directory ~/.local/share/vlc/lua/extensions/
