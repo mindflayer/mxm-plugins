@@ -15,11 +15,17 @@
 #       
 
 import json
-import urllib2
-from urllib import urlencode
+try:
+    import urllib.request as urllib2
+except ImportError:
+    import urllib2
+try:
+    from urllib import urlencode
+except ImportError:
+    from urllib.parse import urlencode
 
 def fetch(url):
-    return json.load(urllib2.urlopen(url))
+    return json.loads(urllib2.urlopen(url).read().decode('utf-8'))
 
 API_KEY = "8298753439c65230b5e89c36cf5794f5"
 API_VERSION = "1.1"
